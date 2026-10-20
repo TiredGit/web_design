@@ -1,0 +1,621 @@
+/* ==========================================================
+   1. ДИЗАЙН-ТОКЕНЫ (тёмная тема — по умолчанию)
+   ========================================================== */
+:root {
+  color-scheme: dark;
+
+  /* Colors */
+  --color-primary: #2A2623;
+  --color-secondary: #6B4E3D;
+  --color-accent: #C9A34F;
+  --color-accent-hover: #D8B665;
+  --color-text: #F5F1EA;
+  --color-text-muted: #C9C2B8;
+  --color-bg: #141414;
+  --color-bg-alt: #2A2623;      /* фон карточек */
+  --color-link: #C9A34F;        /* цвет ссылок в тексте */
+  --color-focus: #F5F1EA;       /* цвет рамки фокуса */
+
+  /* Цвета, которые НЕ зависят от темы
+     (шапка, подвал, меню и текст на фото всегда на тёмном фоне) */
+  --color-on-dark: #F5F1EA;
+  --color-on-accent: #141414;
+
+  /* Прочее, что меняется с темой */
+  --icon-filter: none;          /* светлые иконки остаются светлыми */
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, .4);
+
+  /* Typography */
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --fs-xs: 0.75rem;     /* 12 */
+  --fs-sm: 0.875rem;    /* 14 */
+  --fs-base: 1rem;      /* 16 */
+  --fs-lg: 1.25rem;     /* 20 */
+  --fs-xl: 1.5625rem;   /* 25 */
+  --fs-2xl: 1.9375rem;  /* 31 */
+  --fs-3xl: 2.4375rem;  /* 39 */
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Container */
+  --container-max: 1440px;
+  --container-padding: 16px;
+
+  /* Высота шапки (нужна для Hero и якорных ссылок) */
+  --header-h: 72px;
+}
+
+/* ==========================================================
+   2. СВЕТЛАЯ ТЕМА
+   Меняем только переменные — сами правила ниже не трогаем.
+   Одни и те же значения записаны дважды:
+   1) автоматически по настройке системы (prefers-color-scheme),
+      если пользователь ещё не выбирал тему вручную;
+   2) по атрибуту data-theme="light", который ставит JS.
+   ========================================================== */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --color-text: #1A1714;
+    --color-text-muted: #5C534A;
+    --color-bg: #F7F3EC;
+    --color-bg-alt: #E9E1D3;
+    --color-link: #7A5B16;
+    --color-focus: #1A1714;
+    --icon-filter: invert(1);   /* белые иконки становятся чёрными */
+    --shadow-hover: 0 12px 24px rgba(60, 40, 20, .18);
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-text: #1A1714;
+  --color-text-muted: #5C534A;
+  --color-bg: #F7F3EC;
+  --color-bg-alt: #E9E1D3;
+  --color-link: #7A5B16;
+  --color-focus: #1A1714;
+  --icon-filter: invert(1);
+  --shadow-hover: 0 12px 24px rgba(60, 40, 20, .18);
+}
+
+/* ==========================================================
+   3. БАЗОВЫЕ СТИЛИ
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Блокировка прокрутки страницы, пока открыто мобильное меню */
+body.no-scroll { overflow: hidden; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-md);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* Чтобы заголовок секции не прятался под липкой шапкой при переходе по якорю */
+section[id] { scroll-margin-top: var(--header-h); }
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Узкий контейнер для блоков «Инструкция» и «Отзывы» (контент 720px) */
+.container--narrow {
+  max-width: calc(720px + 2 * var(--container-padding));
+}
+
+.section-title {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* ==========================================================
+   4. КНОПКИ
+   ========================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s, background-color .15s;
+}
+
+.btn--primary { background: var(--color-primary); color: var(--color-on-dark); }
+.btn--accent { background: var(--color-accent); color: var(--color-on-accent); }
+.btn--accent:hover { background: var(--color-accent-hover); }
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.btn:disabled,
+.btn[disabled] { opacity: .5; cursor: not-allowed; transform: none; }
+.btn--lg { padding: var(--space-md) var(--space-2xl); font-size: var(--fs-lg); }
+
+/* ==========================================================
+   5. ШАПКА
+   ========================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: var(--space-md) 0;
+  background: var(--color-secondary);
+  color: var(--color-on-dark);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-right: auto;   /* всё остальное прижимается вправо */
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo__text {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+/* Кнопки-иконки: тема, бургер, закрытие меню */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-on-dark);
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.icon-btn:hover { background: rgba(245, 241, 234, .14); }
+.icon-btn:focus-visible { outline: 2px solid var(--color-on-dark); outline-offset: 2px; }
+.icon-btn svg { width: 28px; height: 28px; }
+
+.theme-toggle__img { width: 28px; height: 28px; }
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+/* --- Навигация: на мобильном — полноэкранное меню --- */
+.nav {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  background: var(--color-secondary);
+  color: var(--color-on-dark);
+
+  /* закрытое состояние */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+}
+
+/* открытое состояние (класс ставит JS) */
+.nav.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity .25s ease, transform .25s ease, visibility 0s;
+}
+
+.nav__close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--container-padding);
+}
+
+.nav__link {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav__link:hover { text-decoration: underline; text-underline-offset: 6px; }
+.nav__link:focus-visible { outline: 2px solid var(--color-on-dark); outline-offset: 4px; }
+
+/* ==========================================================
+   6. HERO
+   ========================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* Высота растёт с шириной экрана, но не больше 640px
+     и не выше экрана (минус шапка), чтобы кнопка была видна без прокрутки */
+  min-height: clamp(300px, 56vw, min(640px, calc(100svh - var(--header-h))));
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: -20%;               /* запас сверху для параллакса */
+  left: 0;
+  width: 100%;
+  height: 120%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: translateY(var(--parallax, 0px));   /* значение пишет JS при прокрутке */
+  will-change: transform;
+}
+
+/* затемнение снизу, чтобы текст и кнопка читались на фото */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 20, 20, .8) 0%, rgba(20, 20, 20, 0) 45%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* заголовок в коде идёт первым (для SEO и скринридеров), но показывается под кнопкой */
+.hero__title {
+  order: 2;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: rgba(20, 20, 20, .55);
+  color: var(--color-on-dark);
+  font-size: var(--fs-base);
+  font-weight: 400;
+}
+
+.hero .btn:focus-visible { outline-color: var(--color-on-dark); }
+
+/* ==========================================================
+   7. СЕКЦИИ (общий отступ)
+   ========================================================== */
+.features,
+.services,
+.how,
+.reviews { padding: var(--space-xl) 0; }
+
+.features { padding-top: var(--space-2xl); }
+
+/* ==========================================================
+   8. FEATURES
+   ========================================================== */
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.feature {
+  display: flex;
+  flex-direction: row-reverse; /* иконка справа, текст слева, как в макете */
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+
+.feature:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.feature__body { flex: 1; }
+
+.feature__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  filter: var(--icon-filter);
+}
+
+.feature__title {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.feature__text {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   9. SERVICES
+   ========================================================== */
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 40% 1fr; /* фото слева, текст справа */
+  min-height: 120px;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-lg);
+  transition: box-shadow .2s, transform .2s;
+}
+
+.service:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.service__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.service__title {
+  margin: 0;
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.service__price {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   10. HOW (инструкция по записи)
+   ========================================================== */
+.how__box {
+  padding: var(--space-lg);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+}
+
+.how__list {
+  display: grid;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.how__phone { margin: 0; }
+
+.how__phone a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================
+   11. REVIEWS
+   ========================================================== */
+.reviews__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.review {
+  padding: var(--space-md);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.review__author {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  text-align: center;
+}
+
+.review__text {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   12. CTA
+   ========================================================== */
+.cta {
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+/* ==========================================================
+   13. FOOTER
+   ========================================================== */
+.footer {
+  padding: var(--space-lg) 0;
+  background: var(--color-secondary);
+  color: var(--color-on-dark);
+  font-size: var(--fs-sm);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.footer__line { margin: 0; }
+
+/* ==========================================================
+   14. ЗАДАНИЕ 3: АНИМАЦИИ ПРИ ПРОКРУТКЕ
+   ========================================================== */
+
+/* Плавное появление блоков.
+   Скрываем только если JS работает (класс .js ставится на <html>) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Прогресс-бар прокрутки */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 4px;
+  background: var(--color-accent);
+  transform-origin: left;
+  transform: scaleX(var(--progress, 0));   /* значение пишет JS */
+  pointer-events: none;
+}
+
+/* ==========================================================
+   15. АДАПТИВ (Mobile First — все media-запросы в конце,
+       чтобы они не перебивались базовыми правилами выше)
+   ========================================================== */
+
+/* Tablet: меню превращается в обычную навигацию, бургер исчезает */
+@media (min-width: 768px) {
+  :root { --container-padding: 24px; }
+
+  .burger,
+  .nav__close { display: none; }
+
+  .nav {
+    position: static;
+    flex-direction: row;
+    gap: var(--space-md);
+    background: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .nav__link { font-size: var(--fs-base); }
+
+  .features__grid,
+  .services__grid,
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .feature { padding: var(--space-md) var(--space-lg); }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .nav { gap: var(--space-xl); }
+}
+
+@media (min-width: 1280px) {
+  .features__grid,
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Пользователи, отключившие анимации в системе */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+
+  /* без перехода блоки не должны остаться невидимыми */
+  .js .reveal { opacity: 1; transform: none; }
+
+  /* параллакс отключён */
+  .hero__bg { transform: none; }
+}
