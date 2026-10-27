@@ -1,0 +1,189 @@
+
+> design_system@1.0.0 build-storybook
+> storybook build --output-dir=C:\Users\Mi\AppData\Local\Temp\chromatic--25640-JQZGNPif8fOu --stats-json=C:\Users\Mi\AppData\Local\Temp\chromatic--25640-JQZGNPif8fOu
+
+
+[90m┌[39m  Building storybook v10.6.4
+[90m│[39m
+[32m◇[39m  Cleaning outputDir:
+[90m│[39m  [36m../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu[39m
+[90m│[39m
+[32m◇[39m  Loading presets
+[90m│[39m
+[32m◇[39m  Building manager..
+[90m│[39m
+[34m●[39m  Building open services..
+[90m│[39m
+[34m●[39m  Building preview..
+[90m│[39m  [43mVite[49m [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+[90m│[39m
+[33m▲[39m  No story files found for the specified pattern: [34msrc\**\*.mdx[39m
+transforming...
+[90m│[39m
+[34m●[39m  Copying static files: [36mimg[39m at
+[90m│[39m  [36m..\..\..\..\AppData\Local\Temp\chromatic--25640-JQZGNPif8fOu\img[39m
+✓ 214 modules transformed.
+rendering chunks...
+computing gzip size...
+[90m│[39m  [43mVite[49m
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/context-C0qIqeS4.png
+[90m│[39m  6.11 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/styling-Bk6zjRzU.png
+[90m│[39m  7.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/iframe.html
+[90m│[39m  19.55 kB │ gzip:   5.39 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/docs---vsFbMi.png
+[90m│[39m  27.87 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/share-DGA-UcQf.png
+[90m│[39m  40.76 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/accessibility-W_h2acOZ.png
+[90m│[39m  42.33 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/figma-plugin-CH2hELiO.png
+[90m│[39m  44.24 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/theming-D6WJLNoW.png
+[90m│[39m  44.37 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/testing-cbzR9l9r.png
+[90m│[39m  49.31 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/addon-library-BWUCAmyN.png
+[90m│[39m  467.36 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Icon-CdgObXry.css
+[90m│[39m  0.11 kB │ gzip:   0.12 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Image-DQdvypQ5.css
+[90m│[39m  0.19 kB │ gzip:   0.16 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/BookingIntro-DfF0Ja2P.css
+[90m│[39m  0.19 kB │ gzip:   0.14 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Subtitle-CXmocND5.css
+[90m│[39m  0.37 kB │ gzip:   0.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Brand-C7m8cb24.css
+[90m│[39m  0.50 kB │ gzip:   0.29 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Header-CzZBVs_w.css
+[90m│[39m  0.50 kB │ gzip:   0.29 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button-C9QAnAgh.css
+[90m│[39m  0.51 kB │ gzip:   0.28 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Link-DCzZQlfa.css
+[90m│[39m  0.72 kB │ gzip:   0.32 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Page-R7v0XIE6.css
+[90m│[39m  0.91 kB │ gzip:   0.39 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/HeroSection-dJOK_WPY.css
+[90m│[39m  1.06 kB │ gzip:   0.53 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/LinkGroup-Bui4qINz.css
+[90m│[39m  1.24 kB │ gzip:   0.47 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Header-DPSxH--s.css
+[90m│[39m  2.91 kB │ gzip:   0.79 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/iframe-1-tn05jH.css
+[90m│[39m  3.24 kB │ gzip:   0.82 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button-CYYyplYQ.css
+[90m│[39m  3.97 kB │ gzip:   0.94 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/iframe-xnBIgLOt.js
+[90m│[39m  0.04 kB │ gzip:   0.06 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Link-0jexaDcA.js
+[90m│[39m  0.29 kB │ gzip:   0.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/formatter-L2YTDE3Q-HGfh58rE.js
+[90m│[39m  0.30 kB │ gzip:   0.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Icon-DoG0c6ux.js
+[90m│[39m  0.31 kB │ gzip:   0.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Subtitle-Bxl43B2H.js
+[90m│[39m  0.31 kB │ gzip:   0.25 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-QQBDHPVZ-DGKYZDIn.js
+[90m│[39m  0.32 kB │ gzip:   0.19 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Image-BhpgDh0R.js
+[90m│[39m  0.32 kB │ gzip:   0.26 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button-DcstwAN_.js
+[90m│[39m  0.44 kB │ gzip:   0.30 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/react-DITjJg24.js
+[90m│[39m  0.58 kB │ gzip:   0.34 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Brand-D23CKr0g.js
+[90m│[39m  0.58 kB │ gzip:   0.40 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/BookingIntro-C0e01LX8.js
+[90m│[39m  0.62 kB │ gzip:   0.41 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Header.stories-BPjJSfDV.js
+[90m│[39m  0.77 kB │ gzip:   0.44 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Link.stories-BIYBTJPz.js
+[90m│[39m  0.99 kB │ gzip:   0.54 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Image.stories-Bev9g2wK.js
+[90m│[39m  1.01 kB │ gzip:   0.56 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Subtitle.stories-CFYIfcfb.js
+[90m│[39m  1.03 kB │ gzip:   0.56 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button-DhNpu8AF.js
+[90m│[39m  1.14 kB │ gzip:   0.63 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Icon.stories-BOaaj86R.js
+[90m│[39m  1.15 kB │ gzip:   0.65 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/rolldown-runtime-sJBDdmOt.js
+[90m│[39m  1.20 kB │ gzip:   0.67 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Header-BG7ZhoFb.js
+[90m│[39m  1.24 kB │ gzip:   0.70 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Brand.stories-DJYJK6WP.js
+[90m│[39m  1.28 kB │ gzip:   0.68 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/BookingIntro.stories-C4NywfkR.js
+[90m│[39m  1.35 kB │ gzip:   0.69 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button.stories-Cu3D6CJa.js
+[90m│[39m  1.44 kB │ gzip:   0.58 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/preload-helper-2GovK0wV.js
+[90m│[39m  1.64 kB │ gzip:   0.87 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-IMSF75WX-CjLAjAi6.js
+[90m│[39m  1.67 kB │ gzip:   0.90 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/LinkGroup-W9kHkT9L.js
+[90m│[39m  1.68 kB │ gzip:   0.82 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/LinkGroup.stories-DIdoZ1sN.js
+[90m│[39m  1.93 kB │ gzip:   0.91 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/HeroSection.stories-CaWx7yJb.js
+[90m│[39m  1.94 kB │ gzip:   0.91 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-DRQKCCAG-BesIColZ.js
+[90m│[39m  3.37 kB │ gzip:   1.40 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Button.stories-CEwXuNvs.js
+[90m│[39m  3.58 kB │ gzip:   1.26 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Page.stories-Ci55uvZW.js
+[90m│[39m  3.70 kB │ gzip:   1.65 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-242VQQM5-CQUR7y2g.js
+[90m│[39m  4.09 kB │ gzip:   1.52 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Header.stories-CZsSdrE1.js
+[90m│[39m  4.46 kB │ gzip:   1.66 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-S6AASC6I-D9Pk2YxV.js
+[90m│[39m  5.38 kB │ gzip:   2.06 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/react-DlPsW1c0.js
+[90m│[39m  7.87 kB │ gzip:   3.00 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Tokens.stories-CQYX-i-b.js
+[90m│[39m  17.49 kB │ gzip:   3.13 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/chunk-W22LQPXL-DkWiGpo7.js
+[90m│[39m  23.02 kB │ gzip:   7.72 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Configure-C4ee0QWM.js
+[90m│[39m  27.25 kB │ gzip:  11.38 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/vite-inject-mocker-entry.js
+[90m│[39m  27.75 kB │ gzip:   9.66 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/matchers-JIUQ3HVY-DLBmcvP1.js
+[90m│[39m  28.75 kB │ gzip:   9.66 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/Color-6AOWCN3U-ByYPCuCC.js
+[90m│[39m  30.38 kB │ gzip:  11.47 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/WithTooltip-CDUNV5IS-BGiywENQ.js
+[90m│[39m  32.69 kB │ gzip:  11.45 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/theming-vvX2bz9x.js
+[90m│[39m  55.34 kB │ gzip:  21.32 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/syntaxhighlighter-4REYKNEV-UZWU9vs_.js
+[90m│[39m  75.84 kB │ gzip:  27.23 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/DocsRenderer-JROSPFPF-Dq7ZEXS2.js
+[90m│[39m  208.74 kB │ gzip:  65.73 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/axe-C4lPdR0t.js
+[90m│[39m  659.30 kB │ gzip: 187.88 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/blocks-B2C0_1Qi.js
+[90m│[39m  746.85 kB │ gzip: 235.88 kB
+[90m│[39m  ../../../../AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu/assets/iframe-DbGZPFLE.js
+[90m│[39m  874.80 kB │ gzip: 245.80 kB
+
+[90m│[39m  [43mVite[49m [32m✓ built in 1.60s[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[plugin builtin:vite-reporter]
+[90m│[39m  (!) Some chunks are larger than 500 kB after minification. Consider:
+[90m│[39m  - Using dynamic import() to code-split the application
+[90m│[39m  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+[90m│[39m  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+[90m│[39m  - Adjust chunk size limit for this warning via
+[90m│[39m  build.chunkSizeWarningLimit.[39m
+[90m│[39m
+[34m●[39m  Preview stats written to
+[90m│[39m  [36mC:\Users\Mi\AppData\Local\Temp\chromatic--25640-JQZGNPif8fOu\preview-stats.json[39m
+[90m│[39m
+[32m◇[39m  Output directory:
+[90m│[39m  C:/Users/Mi/AppData/Local/Temp/chromatic--25640-JQZGNPif8fOu
+[90m│[39m
+[90m└[39m  Storybook build completed successfully
+

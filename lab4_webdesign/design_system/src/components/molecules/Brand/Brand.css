@@ -1,0 +1,27 @@
+.maf-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex: 0 0 auto;
+  margin-right: auto;
+  color: var(--color-semantic-dark-text);
+  font-family: var(--font-family-display);
+  text-decoration: none;
+}
+
+.maf-brand__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: var(--radius-circle, 50%);
+  object-fit: cover;
+}
+
+.maf-brand__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: .03em;
+}
+
+:root[data-theme="light"] .maf-brand { color: var(--color-semantic-light-text); }

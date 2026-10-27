@@ -1,0 +1,11 @@
+.maf-booking-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  text-align: center;
+}
+
+.maf-booking-intro__button { order: 1; }
+.maf-booking-intro__subtitle { order: 2; }

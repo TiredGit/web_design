@@ -1,0 +1,31 @@
+.maf-link {
+  display: inline-block;
+  color: var(--color-semantic-dark-text);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-base);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.maf-link:hover {
+  color: var(--color-semantic-dark-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.maf-link:focus-visible {
+  outline: 2px solid var(--color-semantic-dark-focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+:root[data-theme="light"] .maf-link {
+  color: var(--color-semantic-light-text);
+}
+
+:root[data-theme="light"] .maf-link:hover {
+  color: var(--color-semantic-light-link);
+}

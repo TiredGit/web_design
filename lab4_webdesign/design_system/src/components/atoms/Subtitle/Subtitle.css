@@ -1,0 +1,13 @@
+.maf-subtitle {
+  max-width: 750px;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: rgb(20 20 20 / 55%);
+  color: var(--color-semantic-dark-text);
+  font-family: var(--font-family-display);
+  font-size: clamp(var(--font-size-base), 2.3vw, var(--font-size-xl));
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-tight);
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "design_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.6.4",
+    "@storybook/addon-docs": "^10.6.4",
+    "@storybook/addon-vitest": "^10.6.4",
+    "@storybook/html-vite": "^10.6.4",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "playwright": "latest",
+    "storybook": "^10.6.4",
+    "style-dictionary": "^5.7.1",
+    "vitest": "latest"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

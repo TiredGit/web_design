@@ -1,0 +1,170 @@
+.maf-button {
+  --maf-button-bg: var(--color-semantic-dark-accent);
+  --maf-button-color: var(--color-semantic-dark-on-accent);
+  --maf-button-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  border: 1px solid var(--maf-button-border);
+  border-radius: var(--radius-sm);
+  background: var(--maf-button-bg);
+  color: var(--maf-button-color);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-tight);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--motion-duration-fast) var(--motion-easing-standard),
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-fast) var(--motion-easing-standard),
+    filter var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+/* Variants */
+.maf-button--primary {
+  --maf-button-bg: var(--color-semantic-dark-accent);
+  --maf-button-color: var(--color-semantic-dark-on-accent);
+  --maf-button-border: transparent;
+}
+
+.maf-button--secondary {
+  --maf-button-bg: var(--color-semantic-dark-surface);
+  --maf-button-color: var(--color-semantic-dark-text);
+  --maf-button-border: var(--color-semantic-dark-border);
+}
+
+.maf-button--outline {
+  --maf-button-bg: transparent;
+  --maf-button-color: var(--color-semantic-dark-accent);
+  --maf-button-border: var(--color-semantic-dark-accent);
+}
+
+.maf-button--ghost {
+  --maf-button-bg: transparent;
+  --maf-button-color: var(--color-semantic-dark-accent);
+  --maf-button-border: transparent;
+}
+
+.maf-button--danger {
+  --maf-button-bg: var(--color-semantic-dark-error);
+  --maf-button-color: var(--color-semantic-dark-on-accent);
+  --maf-button-border: transparent;
+}
+
+/* Sizes */
+.maf-button--size-small {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.maf-button--size-medium {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-base);
+}
+
+.maf-button--size-large {
+  padding: var(--space-md) var(--space-2xl);
+  font-size: var(--font-size-lg);
+}
+
+.maf-button--full-width {
+  display: flex;
+  width: 100%;
+}
+
+/* Hover is available both as a real interaction and a selectable Storybook state. */
+.maf-button:hover:not([aria-disabled="true"]),
+.maf-button--state-hover:not([aria-disabled="true"]) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.maf-button:focus-visible,
+.maf-button--state-focus {
+  outline: 3px solid var(--color-semantic-dark-focus);
+  outline-offset: 3px;
+  box-shadow: var(--shadow-focus);
+}
+
+.maf-button:active:not([aria-disabled="true"]),
+.maf-button--state-active:not([aria-disabled="true"]) {
+  filter: brightness(0.96);
+  transform: translateY(0);
+}
+
+.maf-button[aria-disabled="true"] {
+  opacity: 0.48;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.maf-button--state-loading {
+  opacity: 0.82;
+  cursor: wait;
+}
+
+.maf-button__spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-circle);
+  animation: maf-button-spin 0.7s linear infinite;
+}
+
+@keyframes maf-button-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Theme-aware tokens for the light theme. */
+:root[data-theme="light"] .maf-button {
+  --maf-button-bg: var(--color-semantic-light-accent);
+  --maf-button-color: var(--color-semantic-light-on-accent);
+}
+
+:root[data-theme="light"] .maf-button--primary {
+  --maf-button-bg: var(--color-semantic-light-accent);
+  --maf-button-color: var(--color-semantic-light-on-accent);
+}
+
+:root[data-theme="light"] .maf-button--secondary {
+  --maf-button-bg: var(--color-semantic-light-surface);
+  --maf-button-color: var(--color-semantic-light-text);
+  --maf-button-border: var(--color-semantic-light-border);
+}
+
+:root[data-theme="light"] .maf-button--outline,
+:root[data-theme="light"] .maf-button--ghost {
+  --maf-button-color: var(--color-semantic-light-link);
+  --maf-button-border: var(--color-semantic-light-link);
+}
+
+:root[data-theme="light"] .maf-button--ghost {
+  --maf-button-border: transparent;
+}
+
+:root[data-theme="light"] .maf-button--danger {
+  --maf-button-bg: var(--color-semantic-light-error);
+  --maf-button-color: var(--color-semantic-light-on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maf-button,
+  .maf-button__spinner {
+    transition: none;
+    animation-duration: var(--motion-reduced-motion);
+  }
+}

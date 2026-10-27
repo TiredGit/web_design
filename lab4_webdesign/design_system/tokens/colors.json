@@ -1,0 +1,180 @@
+{
+  "color": {
+    "primitive": {
+      "espresso": {
+        "value": "#2A2623",
+        "type": "color"
+      },
+      "brown": {
+        "value": "#6B4E3D",
+        "type": "color"
+      },
+      "gold": {
+        "value": "#C9A34F",
+        "type": "color"
+      },
+      "goldLight": {
+        "value": "#D8B665",
+        "type": "color"
+      },
+      "cream": {
+        "value": "#F5F1EA",
+        "type": "color"
+      },
+      "creamMuted": {
+        "value": "#C9C2B8",
+        "type": "color"
+      },
+      "black": {
+        "value": "#141414",
+        "type": "color"
+      },
+      "paper": {
+        "value": "#F7F3EC",
+        "type": "color"
+      },
+      "sand": {
+        "value": "#E9E1D3",
+        "type": "color"
+      },
+      "ink": {
+        "value": "#1A1714",
+        "type": "color"
+      },
+      "brownMuted": {
+        "value": "#5C534A",
+        "type": "color"
+      },
+      "goldDark": {
+        "value": "#7A5B16",
+        "type": "color"
+      },
+      "errorDark": {
+        "value": "#B3261E",
+        "type": "color"
+      },
+      "errorLight": {
+        "value": "#E8836F",
+        "type": "color"
+      }
+    },
+    "semantic": {
+      "dark": {
+        "background": {
+          "value": "{color.primitive.black}",
+          "type": "color"
+        },
+        "surface": {
+          "value": "{color.primitive.espresso}",
+          "type": "color"
+        },
+        "primary": {
+          "value": "{color.primitive.espresso}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{color.primitive.brown}",
+          "type": "color"
+        },
+        "accent": {
+          "value": "{color.primitive.gold}",
+          "type": "color"
+        },
+        "accentHover": {
+          "value": "{color.primitive.goldLight}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{color.primitive.cream}",
+          "type": "color"
+        },
+        "textMuted": {
+          "value": "{color.primitive.creamMuted}",
+          "type": "color"
+        },
+        "link": {
+          "value": "{color.primitive.gold}",
+          "type": "color"
+        },
+        "focus": {
+          "value": "{color.primitive.cream}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{color.primitive.errorLight}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{color.primitive.brown}",
+          "type": "color"
+        },
+        "onDark": {
+          "value": "{color.primitive.cream}",
+          "type": "color"
+        },
+        "onAccent": {
+          "value": "{color.primitive.black}",
+          "type": "color"
+        }
+      },
+      "light": {
+        "background": {
+          "value": "{color.primitive.paper}",
+          "type": "color"
+        },
+        "surface": {
+          "value": "{color.primitive.sand}",
+          "type": "color"
+        },
+        "primary": {
+          "value": "{color.primitive.espresso}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{color.primitive.brown}",
+          "type": "color"
+        },
+        "accent": {
+          "value": "{color.primitive.gold}",
+          "type": "color"
+        },
+        "accentHover": {
+          "value": "{color.primitive.goldLight}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{color.primitive.ink}",
+          "type": "color"
+        },
+        "textMuted": {
+          "value": "{color.primitive.brownMuted}",
+          "type": "color"
+        },
+        "link": {
+          "value": "{color.primitive.goldDark}",
+          "type": "color"
+        },
+        "focus": {
+          "value": "{color.primitive.ink}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{color.primitive.errorDark}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{color.primitive.brown}",
+          "type": "color"
+        },
+        "onDark": {
+          "value": "{color.primitive.cream}",
+          "type": "color"
+        },
+        "onAccent": {
+          "value": "{color.primitive.black}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

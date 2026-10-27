@@ -1,0 +1,18 @@
+{
+  "shadow": {
+    "hover": {
+      "dark": {
+        "value": "0 12px 24px rgba(0, 0, 0, 0.4)",
+        "type": "boxShadow"
+      },
+      "light": {
+        "value": "0 12px 24px rgba(60, 40, 20, 0.18)",
+        "type": "boxShadow"
+      }
+    },
+    "focus": {
+      "value": "0 0 0 3px currentColor",
+      "type": "boxShadow"
+    }
+  }
+}

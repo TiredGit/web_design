@@ -1,0 +1,10 @@
+.maf-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-dark-surface);
+}

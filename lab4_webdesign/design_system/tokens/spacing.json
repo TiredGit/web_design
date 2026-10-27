@@ -1,0 +1,56 @@
+{
+  "space": {
+    "xs": {
+      "value": "4px",
+      "type": "spacing"
+    },
+    "sm": {
+      "value": "8px",
+      "type": "spacing"
+    },
+    "md": {
+      "value": "16px",
+      "type": "spacing"
+    },
+    "lg": {
+      "value": "24px",
+      "type": "spacing"
+    },
+    "xl": {
+      "value": "32px",
+      "type": "spacing"
+    },
+    "2xl": {
+      "value": "48px",
+      "type": "spacing"
+    },
+    "3xl": {
+      "value": "64px",
+      "type": "spacing"
+    },
+    "4xl": {
+      "value": "96px",
+      "type": "spacing"
+    },
+    "container": {
+      "maxWidth": {
+        "value": "1440px",
+        "type": "dimension"
+      },
+      "padding": {
+        "value": "16px",
+        "type": "spacing"
+      },
+      "narrowContentWidth": {
+        "value": "720px",
+        "type": "dimension"
+      }
+    },
+    "header": {
+      "height": {
+        "value": "72px",
+        "type": "dimension"
+      }
+    }
+  }
+}
