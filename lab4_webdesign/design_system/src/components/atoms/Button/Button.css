@@ -31,7 +31,7 @@
 /* Variants */
 .maf-button--primary {
   --maf-button-bg: var(--color-semantic-dark-accent);
-  --maf-button-color: var(--color-semantic-dark-on-accent);
+  --maf-button-color: var(--color-semantic-dark-text);
   --maf-button-border: transparent;
 }
 
